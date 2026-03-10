@@ -1,0 +1,12 @@
+anthropic
+openai
+langgraph
+langchain
+langchain-anthropic
+langchain-community
+tavily-python
+yfinance
+pandas
+streamlit
+python-dotenv
+requests
