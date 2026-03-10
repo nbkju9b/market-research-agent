@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+test_Anthropic.py
+test_Tavily.py
+test_openAI.py
+output/memos/
+data/kaggle_sentiment/
