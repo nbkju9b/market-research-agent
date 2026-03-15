@@ -1,3 +1,13 @@
+---
+title: Market Research Agent
+emoji: 📈
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_file: app.py
+pinned: true
+---
+
 # Market Research Agent
 
 A multi-agent AI system that researches any publicly traded company
