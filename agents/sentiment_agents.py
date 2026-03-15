@@ -9,6 +9,12 @@ load_dotenv()
 
 DATASET_PATH = "data/kaggle_sentiment/all-data.csv"
 
+# Use sample on HuggingFace, full dataset locally
+if os.path.exists('data/kaggle_sentiment/all-data.csv'):
+    DATASET_PATH = 'data/kaggle_sentiment/all-data.csv'
+else:
+    DATA_PATH = 'data/sentiment_sample.csv'
+
 def load_sentiment_dataset() -> pd.DataFrame:
     """
     Loads the Financial Phrasebank dataset.
