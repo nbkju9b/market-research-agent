@@ -3,7 +3,8 @@ title: Market Research Agent
 emoji: 📈
 colorFrom: blue
 colorTo: green
-sdk: docker
+sdk: streamlit
+sdk_version: "1.41.0"
 app_file: app.py
 pinned: true
 ---
