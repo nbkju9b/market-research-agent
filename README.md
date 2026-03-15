@@ -18,7 +18,7 @@ junior analyst at a hedge fund would spend hours producing manually.
 Built as a portfolio project to demonstrate production-grade AI
 engineering for quantitative finance use cases.
 
-**Live Demo:** [Hugging Face Space](#) ← replace after deployment
+**Live Demo:** (https://huggingface.co/spaces/ArtiAwas/market-research-agent)
 
 ---
 
