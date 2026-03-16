@@ -1,3 +1,4 @@
+"""
 LangGraph Refactor Attempt
 ===========================
 Explored refactoring the sequential multi-agent pipeline into
@@ -20,7 +21,7 @@ Why LangGraph is the right choice for v2:
 1. Parallel execution — financials + news run simultaneously
    cutting research time from ~45s to ~20s per ticker
 2. Built-in state management via TypedDict ResearchState —
-   NO MANUAL DATA PASSING between agents
+   no manual data passing between agents
 3. Native checkpointing — agent remembers previous research
    sessions across runs
 4. Conditional routing — agent adapts path based on what
@@ -28,7 +29,7 @@ Why LangGraph is the right choice for v2:
 5. LangSmith integration — full observability and tracing
    out of the box
 
-   Planned v2 architecture:
+Planned v2 architecture:
 -------------------------
 - LangGraph StateGraph replacing sequential pipeline
 - FastMCP exposing tools as MCP server
@@ -38,10 +39,15 @@ Why LangGraph is the right choice for v2:
 
 See v2/ folder for scaffolded architecture.
 
+References:
+- https://python.langchain.com/docs/langgraph
+- https://github.com/langchain-ai/langgraph
+- https://docs.smith.langchain.com
+"""
+
 from typing import TypedDict, Optional
 
 # v2 ResearchState — replaces manual data passing in v1
-
 class ResearchState(TypedDict):
     ticker: str
     company: str
@@ -58,8 +64,19 @@ class ResearchState(TypedDict):
 # from langgraph.prebuilt import create_react_agent
 # from langgraph.checkpoint.memory import MemorySaver
 
+def build_research_graph():
+    """
+    v2 LangGraph workflow — replaces main.py pipeline
+    
+    v1 flow (sequential, ~45s):
+        financials → news → sentiment → memo
 
-raise NotImplementedError(
+    v2 flow (parallel, ~20s):
+        financials ↘
+                    → sentiment → memo
+        news       ↗
+    """
+    raise NotImplementedError(
         "v2 LangGraph workflow in progress. "
         "See v2/ folder for scaffolded architecture. "
         "Currently using v1 sequential pipeline — run main.py"
