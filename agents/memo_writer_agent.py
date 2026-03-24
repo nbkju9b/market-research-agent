@@ -143,6 +143,7 @@ Avoid generic statements — every claim must be backed by data.
 
     # Save memo to file
     filename = f"output/memos/{ticker}_{datetime.today().strftime('%Y%m%d_%H%M%S')}.txt"
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, "w") as f:
         f.write(memo)
 
